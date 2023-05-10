@@ -3,6 +3,7 @@ from kivy.app import App
 from kivy.properties import NumericProperty
 from kivy.uix.boxlayout import BoxLayout
 from kivy_garden.graph import Graph, LinePlot
+from kivy.uix.button import Button
 import numpy as np
 
 from tools import AudioPlayer
