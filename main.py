@@ -53,7 +53,12 @@ def bcallback(instance):
     print("mic.start")
     #mic.poll()
     time.sleep(5)
+    print("time.sleep")
     mic.stop()
+    print("mic.stop")
+    btn2 = Button(text='Audio Record End')
+    btn2.bind(on_press=bcallback)
+    return btn2
 
 class MyApp(App):
     def build(self):
