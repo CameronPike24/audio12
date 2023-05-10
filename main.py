@@ -1,3 +1,13 @@
+import threading
+from kivy.app import App
+from kivy.properties import NumericProperty
+from kivy.uix.boxlayout import BoxLayout
+from kivy_garden.graph import Graph, LinePlot
+import numpy as np
+
+from tools import AudioPlayer
+
+
 import time
 import wave
 from audiostream import get_input
