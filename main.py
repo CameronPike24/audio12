@@ -46,8 +46,11 @@ def mic_callback(buf):
     print('size of frames: ' + len(frames))
 
 def bcallback(instance):
+    print("we at bcallback")
     mic = get_input(callback=mic_callback, source='mic')
+    print("we at mic = ")
     mic.start()
+    print("mic.start")
     #mic.poll()
     time.sleep(5)
     mic.stop()
