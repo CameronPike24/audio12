@@ -41,7 +41,8 @@ class AudioPlayer:
     def micCallback(self, buffer):
         # method which is called by the method 'get_input' to store recorded audio data (each buffer of audio samples)        
         self.audioData.append(buffer) # appends each buffer (chunk of audio data) to variable 'self.audioData'
-        print('size of frames: ' + len(self.audioData))
+        print('size of frames: ' + str(len(self.audioData)))
+        #print ('got : ' + str(len(buf)))
 
     #def start(self):
         # method which begins the process of recording the audio data
