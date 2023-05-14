@@ -4,8 +4,8 @@ from kivy.properties import NumericProperty
 from kivy.uix.boxlayout import BoxLayout
 from kivy_garden.graph import Graph, LinePlot
 import numpy as np
-from android_permissions import AndroidPermissions
-#from android.permissions import request_permissions,Permission,check_permission
+#from android_permissions import AndroidPermissions
+from android.permissions import request_permissions,Permission,check_permission
 
 
 from tools import AudioPlayer
@@ -14,7 +14,7 @@ from tools import AudioPlayer
 class MainApp(App):
 
     def build(self):
-        #request_permissions([Permission.INTERNET, Permission.RECORD_AUDIO])
+        request_permissions([Permission.INTERNET, Permission.RECORD_AUDIO])
         
         #request_permissions([Permission.INTERNET, Permission.RECORD_AUDIO,
         #                    Permission.READ_EXTERNAL_STORAGE,Permission.WRITE_EXTERNAL_STORAGE])
@@ -22,11 +22,11 @@ class MainApp(App):
 
         return self.app
         
-    def on_start(self, *args):
-        self.dont_gc = AndroidPermissions(self.start_app)
+    #def on_start(self, *args):
+        #self.dont_gc = AndroidPermissions(self.start_app)
 
-    def start_app(self):
-        self.dont_gc = None        
+    #def start_app(self):
+        #self.dont_gc = None        
         
         
         
