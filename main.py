@@ -5,7 +5,7 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy_garden.graph import Graph, LinePlot
 import numpy as np
 from android_permissions import AndroidPermissions
-from android.permissions import request_permissions,Permission,check_permission
+#from android.permissions import request_permissions,Permission,check_permission
 
 
 from tools import AudioPlayer
@@ -21,6 +21,16 @@ class MainApp(App):
         self.app = MainGrid()       
 
         return self.app
+        
+    def on_start(self, *args):
+        self.dont_gc = AndroidPermissions(self.start_app)
+
+    def start_app(self):
+        self.dont_gc = None        
+        
+        
+        
+        
 
     def init_thread(self):
         self.playback_thread = threading.Thread(target=self.app.player.run)
