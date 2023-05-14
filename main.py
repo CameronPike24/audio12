@@ -14,7 +14,7 @@ from tools import AudioPlayer
 class MainApp(App):
 
     def build(self):
-        request_permissions([Permission.INTERNET, Permission.RECORD_AUDIO])
+        #request_permissions([Permission.INTERNET, Permission.RECORD_AUDIO])
         
         #request_permissions([Permission.INTERNET, Permission.RECORD_AUDIO,
         #                    Permission.READ_EXTERNAL_STORAGE,Permission.WRITE_EXTERNAL_STORAGE])
